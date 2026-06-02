@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-from app.vaild import MessageCreate
+from .vaild import MessageCreate
 from fastapi.middleware.cors import CORSMiddleware
-from app.db import Base, SessionLocal
+from  .db import Base, SessionLocal
 from fastapi import Depends
-from app.db import engine
+from .db import engine
 from sqlalchemy.orm import Session
-from app.models import Message
+from .models import Message
 
 
 Base.metadata.create_all(bind=engine)
